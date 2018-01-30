@@ -1,4 +1,4 @@
-window.appName = 'pothigai_login';
+window.appName = 'mf_login';
 
 window.project = "http://hotelpothigai.in/api/"
 
@@ -81,7 +81,7 @@ window[appName].factory('http', function ($http, $rootScope,$state) {
 
 
 
-window[appName].controller('pothigai_home_controller', function ($rootScope, $scope, http, $state, $http, $window, $location, $q, $filter, $stateParams, $interval) {
+window[appName].controller('micro_finance_controller', function ($rootScope, $scope, http, $state, $http, $window, $location, $q, $filter, $stateParams, $interval) {
 
     
 
