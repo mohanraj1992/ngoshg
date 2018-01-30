@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ui',
+    'mauth',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -81,6 +83,8 @@ DATABASES = {
     }
 }
 
+# Session model
+SESSION_ENGINE='mauth.models'
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
@@ -100,6 +104,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Custom user model
+AUTH_USER_MODEL = 'mauth.SystemUser'
+LOGIN_URL = '/auth/login/'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
