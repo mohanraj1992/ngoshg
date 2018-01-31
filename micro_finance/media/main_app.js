@@ -12,14 +12,14 @@ window[appName].config(function ($stateProvider, $urlRouterProvider, $httpProvid
     $stateProvider
         .state('dashboard', {
             url: '/',
-            templateUrl: 'modules/dashboard.html',
+            templateUrl: '/media/modules/dashboard.html',
             controller: 'dashboard'
         });
 
     $stateProvider
         .state('booking', {
             url: '/booking',
-            templateUrl: 'modules/book.html',
+            templateUrl: '/media/modules/book.html',
             controller: 'booking'
         });
 
@@ -27,42 +27,42 @@ window[appName].config(function ($stateProvider, $urlRouterProvider, $httpProvid
     $stateProvider
         .state('profile', {
             url: '/profile',
-            templateUrl: 'modules/profile.html',
+            templateUrl: '/media/modules/profile.html',
             controller: 'password'
         });
 
     $stateProvider
         .state('pureveg', {
             url: '/pureveg',
-            templateUrl: 'modules/pricing.html',
+            templateUrl: '/media/modules/pricing.html',
             controller: 'booking'
         });
 
     $stateProvider
         .state('nonveg', {
             url: '/nonveg',
-            templateUrl: 'modules/nonveg.html',
+            templateUrl: '/media/modules/nonveg.html',
             controller: 'booking'
         });
 
     $stateProvider
         .state('custom', {
             url: '/custom',
-            templateUrl: 'modules/mycombo.html',
+            templateUrl: '/media/modules/mycombo.html',
             controller: 'booking'
         });
 
     $stateProvider
         .state('order_history', {
             url: '/order_history',
-            templateUrl: 'modules/orders.html',
+            templateUrl: '/media/modules/orders.html',
             controller: 'password'
         });
 
     $stateProvider
         .state('payment_history', {
             url: '/payment_history',
-            templateUrl: 'modules/payments.html',
+            templateUrl: '/media/modules/payments.html',
             controller: 'password'
         });
 
