@@ -1,10 +1,212 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html ng-app='micro_finance'>
+
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <!--IE Compatibility modes-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--Mobile first-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Micro Finance for NGO</title>
 
-</body>
+    <meta name="description" content="Micro Finance for Self Help Groups">
+    <meta name="author" content="Hariharaselvam Balasubramanian, Mohanraj Krishnamoorthy">
+    <meta name="keyword" content="Micro Finance, Non Government Organizations, Self Help Groups">
+
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="/media/assets/lib/bootstrap/css/bootstrap.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <!-- Metis core stylesheet -->
+    <link rel="stylesheet" href="/media/assets/css/main.css">
+
+    <!-- metisMenu stylesheet -->
+    <link rel="stylesheet" href="/media/assets/lib/metismenu/metisMenu.css">
+
+    <!-- animate.css stylesheet -->
+    <link rel="stylesheet" href="/media/assets/lib/animate.css/animate.css">
+    <script src="/media/assets/lib/jquery/jquery.js"></script>
+
+    <script src="/media/js/angular/angular.js" type="text/javascript"></script>
+    <script src="/media/js/angular/angular-sanitize.js" type="text/javascript"></script>
+    <script src="/media/js/angular/angular-ui-router.js" type="text/javascript"></script>
+    <script src="/media/js/angular/angular-route.js" type="text/javascript"></script>
+    <script src="/media/js/angular/angular-resource.js" type="text/javascript"></script>
+    <script src="/media/js/highstock.js" type="text/javascript"></script>
+    <script src="/media/js/highcharts-ng.js" type="text/javascript"></script>
+    <script src="/media/js/ngValidator.js" type="text/javascript"></script>
+    <script src="/media/js/exporting.js" type="text/javascript"></script>
+    <script src="/media/js/drilldown.js" type="text/javascript"></script>
+    <script src="/media/js/dirPagination.js" type="text/javascript"></script>
+    <script src="/media/js/pothigai_lib.js" type="text/javascript"></script>
+    <script src="/media/main_app.js" type="text/javascript"></script>
+
+    <script src="/media/modules/dashboard.js" type="text/javascript"></script>
+    <script src="/media/modules/booking.js" type="text/javascript"></script>
+    <script src="/media/modules/password.js" type="text/javascript"></script>
+
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+    <!--For Development Only. Not required -->
+    <script>
+        less = {
+            env: "development",
+            relativeUrls: false,
+            rootpath: "/assets/"
+        };
+    </script>
+    <link rel="stylesheet" href="/media/assets/css/style-switcher.css">
+    <link rel="stylesheet/less" type="text/css" href="/media/assets/less/theme.less">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/2.7.1/less.js"></script>
+
+  </head>
+
+        <body class="  " ng-controller="pothigai_controller">
+            <div class="bg-dark dk" id="wrap">
+                <div id="top">
+                    <!-- .navbar -->
+                    <nav class="navbar navbar-inverse navbar-static-top">
+                        <div class="container-fluid">
+
+
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <header class="navbar-header">
+
+                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a href="#" class="navbar-brand">
+                                    <img src="/media/assets/img/mf_logo.png" alt="Micro Finance" style="width:150px;height: 50px;">
+                                </a>
+
+                            </header>
+
+
+
+                            <div class="topnav">
+
+
+                                <div class="btn-group">
+                                    <a data-placement="bottom" data-original-title="Profile and Password update" ui-sref="profile" data-toggle="tooltip"
+                                       class="btn btn-default btn-sm">
+                                        <i class="fa fa-user"></i>
+                                        <span class="label label-info">{{ username }}</span>
+                                    </a>
+                                    <a href="auth/logout" data-toggle="tooltip" data-original-title="Logout" data-placement="bottom"
+                                       class="btn btn-metis-1 btn-sm">
+                                        <i class="fa fa-power-off"></i>
+                                    </a>
+                                </div>
+
+
+                            </div>
+
+
+
+
+                            <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                                <!-- .nav -->
+                                <ul class="nav navbar-nav">
+                                    <li><a ui-sref="dashboard">Dashboard</a></li>
+
+
+                                    <li class='dropdown '>
+                                        <a  class="dropdown-toggle" data-toggle="dropdown">
+                                            Booking <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a ui-sref="pureveg">Pure Vegitarian</a></li>
+                                            <li><a ui-sref="nonveg">Non Vegitarian</a></li>
+                                            <li><a ui-sref="custom">My Combo</a></li>
+                                            <li><a ui-sref="order_history">Booking History</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class='dropdown '>
+                                        <a  class="dropdown-toggle" data-toggle="dropdown">
+                                            Payment <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a >Pay now</a></li>
+                                            <li><a ui-sref="payment_history">Payment History</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <!-- /.nav -->
+                            </div>
+                        </div>
+                        <!-- /.container-fluid -->
+                    </nav>
+                    <!-- /.navbar -->
+
+                </div>
+                <!-- /#top -->
+
+                <div id="content">
+                    <div class="outer">
+                        <div class="inner bg-light lter">
+<div class="col-lg-12" ui-view id="temp">
+
+
+
+
+
+
+
+</div>
+
+                        </div>
+                        <!-- /.inner -->
+                    </div>
+                    <!-- /.outer -->
+                </div>
+                <!-- /#content -->
+
+                    <!-- /#right -->
+            </div>
+            <!-- /#wrap -->
+            <footer class="Footer bg-dark dker">
+                <p>2018 &copy; <a target="_blank" href="#">Micro Finance</a></p>
+            </footer>
+            <!-- /#footer -->
+            <!-- #helpModal -->
+
+            <!-- /.modal -->
+            <!-- /#helpModal -->
+            <!--jQuery -->
+
+
+
+            <!--Bootstrap -->
+            <script src="/media/assets/lib/bootstrap/js/bootstrap.js"></script>
+            <!-- MetisMenu -->
+            <script src="/media/assets/lib/metismenu/metisMenu.js"></script>
+            <!-- Screenfull -->
+            <script src="/media/assets/lib/screenfull/screenfull.js"></script>
+
+
+            <!-- Metis core scripts -->
+            <script src="/media/assets/js/core.js"></script>
+            <!-- Metis demo scripts -->
+            <script src="/media/assets/js/app.js"></script>
+
+
+        </body>
+
 </html>

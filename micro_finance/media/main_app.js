@@ -1,7 +1,4 @@
-window.appName = 'pothigai';
-
-window.project = "http://hotelpothigai.in/api/"
-
+window.appName = 'micro_finance';
 
 
 window[appName] = angular.module(appName, ['ui.router',   'ngSanitize']);
@@ -149,8 +146,6 @@ window[appName].factory('table', function ($http, $rootScope,$state,http) {
             table_conf['page']=1;
             table_conf['size']=10;
 
-
-
             return table_conf;
 
         }
@@ -211,7 +206,7 @@ window[appName].controller('pothigai_controller', function ($rootScope, $scope, 
  
   
 
-    processTheData('get', 'session', window.project+'profile.php', {});
+
 
 
 });

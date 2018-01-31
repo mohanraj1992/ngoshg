@@ -45,7 +45,8 @@ def login(request):
 def logout(request):
     # log_event(user=request.user, tenant=request.user.tenant, event_code="WMSUSER_LOGOUT")
     userlogout(request)
-    return render(request, 'login.html', {'error': ''})
+    return redirect("/auth/login")
+    #return render(request, 'login.html', {'error': ''})
 
 
 
