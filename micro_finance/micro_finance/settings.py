@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'mauth',
     'groups',
     'loan_details',
-    'member_details'
+    'member_details',
+    'rest_framework_docs',
+    'rest_framework'
 ]
 
 MIDDLEWARE_CLASSES = [
