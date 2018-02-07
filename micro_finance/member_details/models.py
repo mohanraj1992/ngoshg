@@ -2,11 +2,12 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from groups.models import Groups
 
 # Create your models here.
 class Member_Details(models.Model):
     group_code = models.ForeignKey(Groups, on_delete=models.CASCADE)
-    id = models.CharField(max_length=100, default='') #todo This has to be auto generated
+    member_id = models.CharField(max_length=100, default='') #todo This has to be auto generated
     name = models.CharField(max_length=100, default='')
     mobile = models.CharField(max_length=100, default='')
     aadhar_id = models.CharField(max_length=16, default='')

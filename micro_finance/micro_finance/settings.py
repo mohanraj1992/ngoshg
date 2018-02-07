@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ui',
     'mauth',
+    'groups',
+    'loan_details',
+    'member_details'
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -76,12 +79,27 @@ WSGI_APPLICATION = 'micro_finance.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'microf',
+        'USER': 'microf',
+        'PASSWORD': 'asm123',
+        'HOST': '',  # Or an IP Address that your DB is hosted on ( default localhost )
+        'PORT': '',
     }
 }
+
+
+
 
 # Session model
 SESSION_ENGINE='mauth.models'

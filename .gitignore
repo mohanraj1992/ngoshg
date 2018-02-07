@@ -1,2 +1,4 @@
 micro_finance/.idea/
 migrations/
+*.pyc
+db.sqlite3

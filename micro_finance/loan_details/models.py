@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from groups.models import Groups
 
 # Create your models here.
 class Loan_Details(models.Model):
