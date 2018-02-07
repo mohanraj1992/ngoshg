@@ -23,12 +23,19 @@ window[appName].config(function ($stateProvider, $urlRouterProvider, $httpProvid
             controller: 'booking'
         });
 
+    $stateProvider
+        .state('create_group', {
+            url: '/create_group',
+            templateUrl: '/media/modules/create_group.html',
+            controller: 'create_group'
+        });
+
 
     $stateProvider
         .state('profile', {
             url: '/profile',
             templateUrl: '/media/modules/profile.html',
-            controller: 'password'
+            controller: 'profile'
         });
 
     $stateProvider
