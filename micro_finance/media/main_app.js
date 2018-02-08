@@ -140,6 +140,28 @@ window[appName].factory('http', function ($http, $rootScope,$state) {
     }
 });
 
+
+window[appName].service('fileUpload', ['$http', function ($http) {
+    this.uploadFileToUrl = function(file,user,uploadUrl){
+        var fd = new FormData();
+
+        fd.append('image', file);
+        var keys = Object.keys(user);
+        for(i=0;i<keys.length;i++){
+        fd.append(keys[i], user[keys[i]]);
+        }
+
+        $http.post(uploadUrl, fd, {
+            transformRequest: angular.identity,
+            headers: {'Content-Type': undefined}
+        })
+        .success(function(){
+        })
+        .error(function(){
+        });
+    }
+}]);
+
 window[appName].factory('table', function ($http, $rootScope,$state,http) {
     return{
         Requests: function(link,sort,order) {
@@ -161,7 +183,7 @@ window[appName].factory('table', function ($http, $rootScope,$state,http) {
 });
 
 
-window[appName].controller('pothigai_controller', function ($rootScope, $scope, http, $state, $http, $window, $location, $q, $filter, $stateParams, $interval) {
+window[appName].controller('micro_finance_home_controller', function ($rootScope, $scope, http, $state, $http, $window, $location, $q, $filter, $stateParams, $interval) {
 
     
 
