@@ -8,6 +8,7 @@ urlpatterns = [
     # url(r'^create/$', achievements_list, name='achievements_list'),
     url(r'^create/$', GroupsCreateAPIView.as_view(), name='groups_create'),
     url(r'^$', GroupsListAPIView.as_view(), name='groups_list'),
+    url(r'^(?P<pk>\d+)/$', GroupsDetailAPIView.as_view(), name='group_id'),
     url(r'^loandetails/create/$', LoanDetailsCreateAPIView.as_view(), name='groups_create'),
     url(r'^loandetails/$', LoanDetailsListAPIView.as_view(), name='groups_list'),
     url(r'^memberdetails/create/$', MemberDetailsCreateAPIView.as_view(), name='groups_create'),

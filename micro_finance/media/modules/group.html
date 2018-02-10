@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-lg-12">
 
-        <h2>New Group Entry</h2>
+        <h2>{{ group.group_name }}</h2>
         <div class="box">
             <header>
 
@@ -204,9 +204,8 @@
 
                     <div class="form-group">
 
-                        <label class="form-control-label col-lg-3">Upload Image</label>
-                        <div class="col-lg-3">
-                            <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" file-model="myFile" ng-model="user.image">
+                        <div class="col-lg-6">
+                            &nbsp;
                         </div>
                         <div class="col-lg-6">
                             <input class="btn btn-primary pull-right" type="button" value="Create" ng-click="uploadFile()">

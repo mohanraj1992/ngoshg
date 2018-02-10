@@ -15,7 +15,7 @@ class GroupsListAPIView(ListAPIView):
     queryset = Groups.objects.all()
     serializer_class = GroupsSerializer
 
-class GroupsListGroupAPIView(ListAPIView):
+class GroupsDetailAPIView(RetrieveAPIView):
     queryset = Groups.objects.all()
     serializer_class = GroupsSerializer
 
