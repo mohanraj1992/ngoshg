@@ -1,9 +1,9 @@
 <div class="row">
-    <!-- .col-lg-6 -->
-    <div class="col-lg-6">
+    <!-- .col-lg-12 -->
+    <div class="col-lg-12">
         <div class="box">
             <header>
-                <h5>Table Bordered</h5>
+                <h5>Group List</h5>
                 <div class="toolbar">
                     <div class="btn-group">
                         <a href="#borderedTable" data-toggle="collapse" class="btn btn-default btn-sm minimize-box">
@@ -17,97 +17,32 @@
                 <table class="table table-bordered responsive-table">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Score</th>
+                            <th>Group Name</th>
+                            <th>Purpose of Loan</th>
+                            <th>Village</th>
+                            <th>Panchayat</th>
+                            <th>Number of members</th>
+                            <th>Bank</th>
+                            <th>Branch</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Jill</td>
-                            <td>Smith</td>
-                            <td>50</td>
+                        <tr ng-repeat="group in groups">
+                            <td>{{ group.group_name }}</td>
+                            <td>{{ group.loan_purpose }}</td>
+                            <td>{{ group.village }}</td>
+                            <td>{{ group.panchayat }}</td>
+                            <td>{{ group.no_of_members }}</td>
+                            <td>{{ group.bank }}</td>
+                            <td>{{ group.branch }}</td>
                         </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Eve</td>
-                            <td>Jackson</td>
-                            <td>94</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>80</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                        </tr>
-                    </tbody>                </table>
-            </div>
-        </div>
-    </div>
-    <!-- /.col-lg-6 -->
 
-    <!-- .col-lg-6 -->
-    <div class="col-lg-6">
-        <div class="box">
-            <header>
-                <h5>Table Condensed</h5>
-                <div class="toolbar">
-                    <div class="btn-group">
-                        <a href="#condensedTable" data-toggle="collapse" class="btn btn-default btn-sm minimize-box">
-                            <i class="fa fa-angle-up"></i>
-                        </a>
-                        <a class="btn btn-danger btn-sm close-box"><i class="fa fa-times"></i></a>
-                    </div>
-                </div>
-            </header>
-            <div id="condensedTable" class="body collapse in">
-                <table class="table table-condensed responsive-table">
-                    <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>First Name</th>
-                            <th>Last Name</th>
-                            <th>Score</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Jill</td>
-                            <td>Smith</td>
-                            <td>50</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Eve</td>
-                            <td>Jackson</td>
-                            <td>94</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>John</td>
-                            <td>Doe</td>
-                            <td>80</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Adam</td>
-                            <td>Johnson</td>
-                            <td>67</td>
-                        </tr>
-                    </tbody>                </table>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-    <!-- /.col-lg-6 -->
+
 </div>
 <!-- /.row -->
 

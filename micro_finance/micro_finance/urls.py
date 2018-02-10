@@ -19,7 +19,7 @@ from django.views.static import serve
 from django.conf import settings
 
 urlpatterns = [
-    url(r'^docs/', include('rest_framework_docs.urls')),
+    #url(r'^docs/', include('rest_framework_docs.urls')),
     url(r'^', include('ui.urls')),
     url(r'^auth/', include('mauth.urls')),
     url(r'^api/groups/', include("groups.urls", namespace="groups-api")),
