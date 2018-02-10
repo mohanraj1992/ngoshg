@@ -30,6 +30,13 @@ window[appName].config(function ($stateProvider, $urlRouterProvider, $httpProvid
             controller: 'create_group'
         });
 
+    $stateProvider
+        .state('group', {
+            url: '/group/:id',
+            templateUrl: '/media/modules/group.html',
+            controller: 'group'
+        });
+
 
     $stateProvider
         .state('profile', {

@@ -28,7 +28,11 @@
                     </thead>
                     <tbody>
                         <tr ng-repeat="group in groups">
-                            <td>{{ group.group_name }}</td>
+                            <td>
+                                <a ui-sref="group({id:group.id})">
+                                   {{ group.group_name }}
+                                </a>
+                            </td>
                             <td>{{ group.loan_purpose }}</td>
                             <td>{{ group.village }}</td>
                             <td>{{ group.panchayat }}</td>
